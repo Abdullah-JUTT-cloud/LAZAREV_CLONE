@@ -10,6 +10,55 @@ html, body{
     color: white;
     
 }
+nav{
+    position: fixed;
+    /* background-color: red; */
+    display: flex;
+    text-align: center;
+    width: 100%;
+    padding: 2vw 10.4vw;
+    justify-content: space-between;
+}
+.nav-part2{
+    display: flex;
+    gap: 2vw;
+}
+.nav-part2 h4{
+    font-size: 0.8vw;
+    font-weight: 600;
+    text-transform:uppercase;
+}
+#nav-bottom{
+    /* background-color: red; */
+    height: 00%;
+    width: 79%;
+    position: absolute;
+    transition: all ease 0.65s;
+    bottom: 00%;
+    border-bottom: 1px solid #dadadada;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* gap: 4.5vw; */
+    padding: 2vw 14vw;
+    padding-left: 17.5vw;
+    padding-top: 3vw;
+}
+.bottom-div h5{
+    /* background-color: red; */
+    margin-bottom:0.4vw ;
+    overflow: hidden;
+}
+.bottom-div h5 span{
+    font-weight: 500;
+    font-size: 0.7vw;
+    display: inline-block;
+}
+nav:hover #nav-bottom{
+    height: 100%;
+    bottom: -100%;
+    
+}
 #page1{
     height: 100vh;
     width: 100%;
