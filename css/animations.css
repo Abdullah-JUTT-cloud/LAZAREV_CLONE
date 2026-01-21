@@ -1,0 +1,19 @@
+/**
+ * Animation Styles - Keyframes & Transitions
+ * Contains all CSS animations and keyframes
+ */
+
+/* ================================
+   KEYFRAME ANIMATIONS
+   ================================ */
+
+/* Moving Logo Animation */
+@keyframes mobe {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

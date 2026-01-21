@@ -5,338 +5,533 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAZAREV. 🪀 — Digital Product Design Agency | Award Winning UX & UI Agency</title>
-    <link rel="shortcut icon" href="https://assets-global.website-files.com/64a2ab71942e1d57feb6fe39/6528221f95333ff155d01ad2_fav.gif" type="image/x-icon">
+    <link rel="shortcut icon"
+        href="https://assets-global.website-files.com/64a2ab71942e1d57feb6fe39/6528221f95333ff155d01ad2_fav.gif"
+        type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Modular CSS Files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
+    <!-- Main Navigation -->
     <nav>
-        <h1>LAZAREV.</h1>
+        <h1 class="nav-logo" data-section="home">LAZAREV.</h1>
         <div class="nav-part2">
-            <div class="nav-elem">
+            <div class="nav-elem" data-section="case-studies">
                 <h4>Case Studies</h4>
                 <h5><span>Case Studies</span></h5>
             </div>
-            <div class="nav-elem">
-                <h4>Areas of experties</h4>
+            <div class="nav-elem" data-section="insights">
+                <h4>Areas of expertise</h4>
                 <h5><span>AI & ML</span></h5>
                 <h5><span>Fintech</span></h5>
                 <h5><span>Real Estate</span></h5>
                 <h5><span>E-commerce</span></h5>
                 <h5><span>Web 3</span></h5>
             </div>
-            <div class="nav-elem">
+            <div class="nav-elem" data-section="services">
                 <h4>UIUX Design</h4>
                 <h5><span>Fintech</span></h5>
                 <h5><span>Real Estate</span></h5>
                 <h5><span>E-commerce</span></h5>
                 <h5><span>Web 3</span></h5>
             </div>
-            <div class="nav-elem">
-                <h4>PRoduct design</h4>
+            <div class="nav-elem" data-section="services">
+                <h4>Product Design</h4>
                 <h5><span>Fintech</span></h5>
                 <h5><span>Real Estate</span></h5>
                 <h5><span>E-commerce</span></h5>
                 <h5><span>Web 3</span></h5>
             </div>
-            <div class="nav-elem">
+            <div class="nav-elem" data-section="process">
                 <h4>Design Process</h4>
-
                 <h5><span>E-commerce</span></h5>
                 <h5><span>Web 3</span></h5>
             </div>
-            <div class="nav-elem">
+            <div class="nav-elem" data-section="contact">
                 <h4>About Agency</h4>
                 <h5><span>Fintech</span></h5>
                 <h5><span>Real Estate</span></h5>
-                <h5></h5>
                 <h5><span>Web 3</span></h5>
             </div>
         </div>
-        <button>Let's Talk <svg fill="none" viewBox="0 0 20 20">
+        <button id="nav-talk-btn">Let's Talk <svg fill="none" viewBox="0 0 20 20">
                 <path fill="#fff"
                     d="M2.5 14.375V17.5h3.125l9.217-9.217-3.125-3.125L2.5 14.375Zm14.758-8.508a.83.83 0 0 0 0-1.175l-1.95-1.95a.83.83 0 0 0-1.175 0l-1.525 1.525 3.125 3.125 1.525-1.525Z">
                 </path>
             </svg></button>
-        <div id="nav-bottom">
-
-        </div>
+        <div id="nav-bottom"></div>
     </nav>
+    <!-- Main Content Container -->
     <div id="main">
-        <div id="page1">
-            <h1>AI & ML PR<span><svg class="c-bttn__morph" fill="none" viewBox="0 0 131 136">
-                        <path class="g-path" data-morph="end" fill="#fff"
-                            d="M48 77.457v7.224h7.224l21.307-21.306-7.224-7.225L48 77.457Zm34.118-19.67a1.919 1.919 0 0 0 0-2.716l-4.508-4.508a1.919 1.919 0 0 0-2.716 0l-3.526 3.526 7.224 7.224 3.526-3.525Z">
-                        </path>
-                        <path class="g-path" data-morph="start" fill="#fff"
-                            d="M48 77.457v7.224h7.224l21.307-21.306-7.224-7.225L48 77.457Zm34.118-19.67a1.919 1.919 0 0 0 0-2.716l-4.508-4.508a1.919 1.919 0 0 0-2.716 0l-3.526 3.526 7.224 7.224 3.526-3.525Z"
-                            data-original="M65.72 109.14c10.08 0 17.76-3.78 23.04-11.34 5.4-7.68 8.1-17.64 8.1-29.88 0-12.24-2.7-22.2-8.1-29.88-5.28-7.68-12.96-11.52-23.04-11.52-9.96 0-17.7 3.84-23.22 11.52-5.4 7.68-8.1 17.64-8.1 29.88 0 12.12 2.7 22.02 8.1 29.7 5.52 7.68 13.26 11.52 23.22 11.52Zm46.08 7.02c-11.64 12.6-27.06 18.9-46.26 18.9s-34.62-6.3-46.26-18.9C7.76 103.56 2 87.48 2 67.92c0-19.56 5.76-35.64 17.28-48.24C30.92 7.08 46.34.78 65.54.78s34.62 6.3 46.26 18.9c11.64 12.6 17.46 28.68 17.46 48.24 0 19.56-5.82 35.64-17.46 48.24Z">
-                        </path>
-                    </svg></span>duct</h1>
-            <h1>DESIGN Agency</h1>
-            <p>We partner with AI &amp; ML&nbsp;businesses, guiding them from series A <br>to series D and beyond with
-                our expertise in </p>
-            <div id="page1-something">
-                <h4>Brand design</h4>
-                <h4>User Experience</h4>
-                <h4>and</h4>
-                <h4>Digital product design</h4>.
-            </div>
-            <div id="moving-div">
-                <div id="blur-left"></div>
-                <div class="move">
-                    <img src="https://lazarev.kiev.ua/la24/forbes.svg" alt="">
-                    <img src="https://lazarev.kiev.ua/la24/adweek.svg" alt="">
-                    <img src="https://lazarev.kiev.ua/la24/pmi.svg" alt="">
-                    <img src="https://lazarev.kiev.ua/la24/wf.svg" alt="">
-                    <img src="https://lazarev.kiev.ua/la24/adweek.svg" alt="">
-                    <img src="https://lazarev.kiev.ua/la24/rd.svg" alt="">
-                    <img src="https://lazarev.kiev.ua/la24/pmi.svg" alt="">
-                    <img src="https://lazarev.kiev.ua/la24/webby.svg" alt="">
+        <!-- Hero Section -->
+        <section id="home" class="page-section">
+            <div id="page1">
+                <h1>AI & ML PR<span><svg class="c-bttn__morph" fill="none" viewBox="0 0 131 136">
+                            <path class="g-path" data-morph="end" fill="#fff"
+                                d="M48 77.457v7.224h7.224l21.307-21.306-7.224-7.225L48 77.457Zm34.118-19.67a1.919 1.919 0 0 0 0-2.716l-4.508-4.508a1.919 1.919 0 0 0-2.716 0l-3.526 3.526 7.224 7.224 3.526-3.525Z">
+                            </path>
+                            <path class="g-path" data-morph="start" fill="#fff"
+                                d="M48 77.457v7.224h7.224l21.307-21.306-7.224-7.225L48 77.457Zm34.118-19.67a1.919 1.919 0 0 0 0-2.716l-4.508-4.508a1.919 1.919 0 0 0-2.716 0l-3.526 3.526 7.224 7.224 3.526-3.525Z"
+                                data-original="M65.72 109.14c10.08 0 17.76-3.78 23.04-11.34 5.4-7.68 8.1-17.64 8.1-29.88 0-12.24-2.7-22.2-8.1-29.88-5.28-7.68-12.96-11.52-23.04-11.52-9.96 0-17.7 3.84-23.22 11.52-5.4 7.68-8.1 17.64-8.1 29.88 0 12.12 2.7 22.02 8.1 29.7 5.52 7.68 13.26 11.52 23.22 11.52Zm46.08 7.02c-11.64 12.6-27.06 18.9-46.26 18.9s-34.62-6.3-46.26-18.9C7.76 103.56 2 87.48 2 67.92c0-19.56 5.76-35.64 17.28-48.24C30.92 7.08 46.34.78 65.54.78s34.62 6.3 46.26 18.9c11.64 12.6 17.46 28.68 17.46 48.24 0 19.56-5.82 35.64-17.46 48.24Z">
+                            </path>
+                        </svg></span>duct</h1>
+                <h1>DESIGN Agency</h1>
+                <p>We partner with AI &amp; ML&nbsp;businesses, guiding them from series A <br>to series D and beyond
+                    with
+                    our expertise in </p>
+                <div id="page1-something">
+                    <h4>Brand design</h4>
+                    <h4>User Experience</h4>
+                    <h4>and</h4>
+                    <h4>Digital product design</h4>.
                 </div>
-                <div class="move">
-                    <img src="https://lazarev.kiev.ua/la24/forbes.svg" alt="">
-                    <img src="https://lazarev.kiev.ua/la24/adweek.svg" alt="">
-                    <img src="https://lazarev.kiev.ua/la24/pmi.svg" alt="">
-                    <img src="https://lazarev.kiev.ua/la24/wf.svg" alt="">
-                    <img src="https://lazarev.kiev.ua/la24/adweek.svg" alt="">
-                    <img src="https://lazarev.kiev.ua/la24/rd.svg" alt="">
-                    <img src="https://lazarev.kiev.ua/la24/pmi.svg" alt="">
-                    <img src="https://lazarev.kiev.ua/la24/webby.svg" alt="">
-                </div>
-                <div id="blur-right"></div>
-
-            </div>
-        </div>
-        <div id="page2">
-            <div id="page2-left">
-                <p>Exclusive insights into <br>UI/UX and product design</p>
-                <h5>Being a design studio at the forefront of digital transformation and product design, we take it upon
-                    ourselves to drop some knowledge, share insights, let out insider tips, and put our work on full
-                    display</h5>
-            </div>
-            <div id="page2-right">
-                <div class="right-elem" id="right-elem1">
-                    <h2>How to Design An AI InterFace Users will <br>Trust in 2024?</h2>
-                    <img src="https://assets-global.website-files.com/64a5e6675a4159253d0ee3e0/65c5011d306a52274ebea027_cover.webp"
-                        alt="">
-                </div>
-                <div class="right-elem">
-                    <h2>How to Design An AI InterFace Users will <br>Trust in 2024?</h2>
-                    <img src="https://assets-global.website-files.com/64a5e6675a4159253d0ee3e0/65c5011d306a52274ebea027_cover.webp"
-                        alt="">
-                </div>
-                <div class="right-elem">
-                    <h2>How to Design An AI InterFace Users will <br>Trust in 2024?</h2>
-                    <img src="https://assets-global.website-files.com/64a5e6675a4159253d0ee3e0/65c5011d306a52274ebea027_cover.webp"
-                        alt="">
-                </div>
-                <div class="right-elem">
-                    <h2>How to Design An AI InterFace Users will <br>Trust in 2024?</h2>
-                    <img src="https://assets-global.website-files.com/64a5e6675a4159253d0ee3e0/65c5011d306a52274ebea027_cover.webp"
-                        alt="">
-                </div>
-            </div>
-
-        </div>
-        <div id="page3">
-            <video src="https://lazarev.kiev.ua/la24/la-reel--min.mp4"></video>
-            <div class="page3-center">
-                <div class="icon">
-                    <i class="ri-play-fill"></i>
-                </div>
-                <h5>Watch Showreel</h5>
-            </div>
-        </div>
-        <div id="page4">
-            <div class="section">
-                <div class="sec-left">
-                    <h2>Accern. Rhea</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit inventore enim, quos, qui est
-                        id, architecto libero in esse vel officiis repellat alias maxime minima.</p>
-                </div>
-                <div class="sec-right">
-                    <img src="https://assets-global.website-files.com/64a5e6675a4159253d0ee3e0/65a93ac90b586168e5917ac8_Rhea%20-%20cover_horizontal_low.webp"
-                        alt="">
-                    <video muted src="./accern-rhea-cover-big.mp4"></video>
-                </div>
-            </div>
-            <div class="section">
-                <div class="sec-left">
-                    <h2>AfroTech</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit inventore enim, quos, qui est
-                        id, architecto libero in esse vel officiis repellat alias maxime minima.</p>
-                </div>
-                <div class="sec-right">
-                    <img src="https://assets-global.website-files.com/64a5e6675a4159253d0ee3e0/65cb66041ce86ac3784aaba1_Afrotech%20-%20cover_horizontal.webp"
-                        alt="">
-                    <video muted src="https://lazarev.kiev.ua/cases/la24/afrotech-cover-big.mp4"></video>
-                </div>
-            </div>
-        </div>
-        <div id="page5">
-            <button>Become a Client</button>
-            <div id="page5-right">
-                <p><span></span>We lead your startup at every step of its <span></span>growth, providing unparalleled
-                    personal service at every interaction. Whether it's launching an MVP, revamping an existing product,
-                    securing funding with UI prototypes, increasing customer engagement, or boosting conversions, we
-                    develop a suite of custom-tailored design services to fulfill your expectations.</p>
-                <div id="page5-content">
-                    <div class="uiux">
-                        <details open>
-                            <summary>
-                                <h1>UI/UX Design</h1>
-                                <div id="flex">
-                                    <h4>UX Audit</h4>
-                                    <h4>UI Design</h4>
-                                    <h4>UX Design</h4>
-                                    <h4>UX Research</h4>
-                                </div>
-                            </summary>
-                            <div id="page-container">
-                                <div class="page5-elem">
-                                    <div class="over"></div>
-                                    <h3>UX Research</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consequatur
-                                        error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
-                                        animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur? Illum,
-                                        ducimus.</p>
-                                    <i class="ri-arrow-right-up-line"></i>
-                                </div>
-                                <div class="page5-elem">
-                                    <div class="over"></div>
-                                    <h3>UX Design</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consequatur
-                                        error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
-                                        animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur? Illum,
-                                        ducimus.</p>
-                                    <i class="ri-arrow-right-up-line"></i>
-                                </div>
-                                <div class="page5-elem">
-                                    <div class="over"></div>
-                                    <h3>UI Design</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consequatur
-                                        error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
-                                        animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur? Illum,
-                                        ducimus.</p>
-                                    <i class="ri-arrow-right-up-line"></i>
-                                </div>
-                                <div class="page5-elem">
-                                    <div class="over"></div>
-                                    <h3>UX Audit</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consequatur
-                                        error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
-                                        animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur? Illum,
-                                        ducimus.</p>
-                                    <i class="ri-arrow-right-up-line"></i>
-                                </div>
-                            </div>
-                        </details>
+                <div id="moving-div">
+                    <div id="blur-left"></div>
+                    <div class="move">
+                        <img src="https://lazarev.kiev.ua/la24/forbes.svg" alt="">
+                        <img src="https://lazarev.kiev.ua/la24/adweek.svg" alt="">
+                        <img src="https://lazarev.kiev.ua/la24/pmi.svg" alt="">
+                        <img src="https://lazarev.kiev.ua/la24/wf.svg" alt="">
+                        <img src="https://lazarev.kiev.ua/la24/adweek.svg" alt="">
+                        <img src="https://lazarev.kiev.ua/la24/rd.svg" alt="">
+                        <img src="https://lazarev.kiev.ua/la24/pmi.svg" alt="">
+                        <img src="https://lazarev.kiev.ua/la24/webby.svg" alt="">
                     </div>
-                    <div class="product">
-                        <details>
-                            <summary>
-                                <h1>Product Design</h1>
-                                <div id="flex">
-                                    <h4>UX Audit</h4>
-                                    <h4>UI Design</h4>
-                                    <h4>UX Design</h4>
-                                    <h4>UX Research</h4>
-                                </div>
-                            </summary>
-                            <div id="page-container">
-                                <div class="page5-elem">
-                                    <div class="over"></div>
-                                    <h3>UX Research</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consequatur
-                                        error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
-                                        animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur? Illum,
-                                        ducimus.</p>
-                                    <i class="ri-arrow-right-up-line"></i>
-                                </div>
-                                <div class="page5-elem">
-                                    <div class="over"></div>
-                                    <h3>UX Design</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consequatur
-                                        error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
-                                        animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur? Illum,
-                                        ducimus.</p>
-                                    <i class="ri-arrow-right-up-line"></i>
-                                </div>
-                                <div class="page5-elem">
-                                    <div class="over"></div>
-                                    <h3>UI Design</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consequatur
-                                        error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
-                                        animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur? Illum,
-                                        ducimus.</p>
-                                    <i class="ri-arrow-right-up-line"></i>
-                                </div>
-                                <div class="page5-elem">
-                                    <div class="over"></div>
-                                    <h3>UX Audit</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consequatur
-                                        error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
-                                        animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur? Illum,
-                                        ducimus.</p>
-                                    <i class="ri-arrow-right-up-line"></i>
-                                </div>
-                            </div>
-                        </details>
+                    <div class="move">
+                        <img src="https://lazarev.kiev.ua/la24/forbes.svg" alt="">
+                        <img src="https://lazarev.kiev.ua/la24/adweek.svg" alt="">
+                        <img src="https://lazarev.kiev.ua/la24/pmi.svg" alt="">
+                        <img src="https://lazarev.kiev.ua/la24/wf.svg" alt="">
+                        <img src="https://lazarev.kiev.ua/la24/adweek.svg" alt="">
+                        <img src="https://lazarev.kiev.ua/la24/rd.svg" alt="">
+                        <img src="https://lazarev.kiev.ua/la24/pmi.svg" alt="">
+                        <img src="https://lazarev.kiev.ua/la24/webby.svg" alt="">
+                    </div>
+                    <div id="blur-right"></div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Insights Section -->
+        <section id="insights" class="page-section">
+            <div id="page2">
+                <div id="page2-left">
+                    <p>Exclusive insights into <br>UI/UX and product design</p>
+                    <h5>Being a design studio at the forefront of digital transformation and product design, we take it
+                        upon
+                        ourselves to drop some knowledge, share insights, let out insider tips, and put our work on full
+                        display</h5>
+                </div>
+                <div id="page2-right">
+                    <div class="right-elem" id="right-elem1">
+                        <h2>How to Design An AI InterFace Users will <br>Trust in 2024?</h2>
+                        <img src="https://assets-global.website-files.com/64a5e6675a4159253d0ee3e0/65c5011d306a52274ebea027_cover.webp"
+                            alt="">
+                    </div>
+                    <div class="right-elem">
+                        <h2>How to Design An AI InterFace Users will <br>Trust in 2024?</h2>
+                        <img src="https://assets-global.website-files.com/64a5e6675a4159253d0ee3e0/65c5011d306a52274ebea027_cover.webp"
+                            alt="">
+                    </div>
+                    <div class="right-elem">
+                        <h2>How to Design An AI InterFace Users will <br>Trust in 2024?</h2>
+                        <img src="https://assets-global.website-files.com/64a5e6675a4159253d0ee3e0/65c5011d306a52274ebea027_cover.webp"
+                            alt="">
+                    </div>
+                    <div class="right-elem">
+                        <h2>How to Design An AI InterFace Users will <br>Trust in 2024?</h2>
+                        <img src="https://assets-global.website-files.com/64a5e6675a4159253d0ee3e0/65c5011d306a52274ebea027_cover.webp"
+                            alt="">
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="page6">
-            <h1>Digital Product Design Process</h1>
-            <div id="page6-content">
-                <div id="blue-btn">
-                    <h4>See all Case Studies <i class="ri-arrow-right-up-line"></i></h4>
-                    <h4>See all Case Studies <i class="ri-arrow-right-up-line"></i></h4>
-                </div>
-                <div id="right-6">
-                    <p>We do not take on projects that involve blind conformity or designing out of context. We won't
-                        settle for a user interface design that is misaligned with your product and digital strategy.
-                        Neither will we launch web development ventures without user testing to validate our design
-                        solutions.</p>
-                    <p>Instead, we create scalable digital products that meet the ever-evolving demands of our
-                        customers, ensuring long-term sustainability.</p>
+        </section>
 
+        <!-- Showreel Section -->
+        <section id="showreel" class="page-section">
+            <div id="page3">
+                <video src="https://lazarev.kiev.ua/la24/la-reel--min.mp4"></video>
+                <div class="page3-center">
+                    <div class="icon">
+                        <i class="ri-play-fill"></i>
+                    </div>
+                    <h5>Watch Showreel</h5>
                 </div>
             </div>
-            <div id="page6-bottom">
-                <div id="btm6-part1" class="btm6-parts"></div>
-                <div id="btm6-part2" class="btm6-parts">
-                    <h5>Product Strategy</h5>
-                    <h4><span>1</span>Strategy Workshop</h4>
-                    <h4><span>2</span>Idea Validation</h4>
-                    <h4><span>3</span>Market Research</h4>
-                    <h4><span>4</span>Product Positioning</h4>
-                    <h4><span>5</span>UX Research</h4>
-                    <h4><span>6</span>Functional Decomposition</h4>
-                </div>
-                <div id="btm6-part3" class="btm6-parts">
-                    <h5>UX Design</h5>
-                    <h4><span>1</span>Strategy </h4>
-                    <h4><span>2</span>Idea </h4>
+        </section>
 
+        <!-- Case Studies Section -->
+        <section id="case-studies" class="page-section">
+            <div id="page4">
+                <div class="section">
+                    <div class="sec-left">
+                        <h2>Accern. Rhea</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit inventore enim, quos, qui
+                            est
+                            id, architecto libero in esse vel officiis repellat alias maxime minima.</p>
+                    </div>
+                    <div class="sec-right">
+                        <img src="https://assets-global.website-files.com/64a5e6675a4159253d0ee3e0/65a93ac90b586168e5917ac8_Rhea%20-%20cover_horizontal_low.webp"
+                            alt="">
+                        <video muted src="./accern-rhea-cover-big.mp4"></video>
+                    </div>
                 </div>
-                <div id="btm6-part4" class="btm6-parts">
-                    <h5>UI Design</h5>
-                    <h4><span>1</span>Strategy</h4>
-                    <h4><span>2</span>Idea </h4>
-                    <h4><span>3</span>Market </h4>
-                </div>
-                <div id="btm6-part5" class="btm6-parts">
-                    <h5>Delivery</h5>
-
+                <div class="section">
+                    <div class="sec-left">
+                        <h2>AfroTech</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit inventore enim, quos, qui
+                            est
+                            id, architecto libero in esse vel officiis repellat alias maxime minima.</p>
+                    </div>
+                    <div class="sec-right">
+                        <img src="https://assets-global.website-files.com/64a5e6675a4159253d0ee3e0/65cb66041ce86ac3784aaba1_Afrotech%20-%20cover_horizontal.webp"
+                            alt="">
+                        <video muted src="https://lazarev.kiev.ua/cases/la24/afrotech-cover-big.mp4"></video>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="page7">
-            
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="page-section">
+            <div id="page5">
+                <button>Become a Client</button>
+                <div id="page5-right">
+                    <p><span></span>We lead your startup at every step of its <span></span>growth, providing
+                        unparalleled
+                        personal service at every interaction. Whether it's launching an MVP, revamping an existing
+                        product,
+                        securing funding with UI prototypes, increasing customer engagement, or boosting conversions, we
+                        develop a suite of custom-tailored design services to fulfill your expectations.</p>
+                    <div id="page5-content">
+                        <div class="uiux">
+                            <details open>
+                                <summary>
+                                    <h1>UI/UX Design</h1>
+                                    <div id="flex">
+                                        <h4>UX Audit</h4>
+                                        <h4>UI Design</h4>
+                                        <h4>UX Design</h4>
+                                        <h4>UX Research</h4>
+                                    </div>
+                                </summary>
+                                <div id="page-container">
+                                    <div class="page5-elem">
+                                        <div class="over"></div>
+                                        <h3>UX Research</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                                            consequatur
+                                            error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
+                                            animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur?
+                                            Illum,
+                                            ducimus.</p>
+                                        <i class="ri-arrow-right-up-line"></i>
+                                    </div>
+                                    <div class="page5-elem">
+                                        <div class="over"></div>
+                                        <h3>UX Design</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                                            consequatur
+                                            error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
+                                            animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur?
+                                            Illum,
+                                            ducimus.</p>
+                                        <i class="ri-arrow-right-up-line"></i>
+                                    </div>
+                                    <div class="page5-elem">
+                                        <div class="over"></div>
+                                        <h3>UI Design</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                                            consequatur
+                                            error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
+                                            animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur?
+                                            Illum,
+                                            ducimus.</p>
+                                        <i class="ri-arrow-right-up-line"></i>
+                                    </div>
+                                    <div class="page5-elem">
+                                        <div class="over"></div>
+                                        <h3>UX Audit</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                                            consequatur
+                                            error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
+                                            animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur?
+                                            Illum,
+                                            ducimus.</p>
+                                        <i class="ri-arrow-right-up-line"></i>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                        <div class="product">
+                            <details>
+                                <summary>
+                                    <h1>Product Design</h1>
+                                    <div id="flex">
+                                        <h4>UX Audit</h4>
+                                        <h4>UI Design</h4>
+                                        <h4>UX Design</h4>
+                                        <h4>UX Research</h4>
+                                    </div>
+                                </summary>
+                                <div id="page-container">
+                                    <div class="page5-elem">
+                                        <div class="over"></div>
+                                        <h3>UX Research</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                                            consequatur
+                                            error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
+                                            animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur?
+                                            Illum,
+                                            ducimus.</p>
+                                        <i class="ri-arrow-right-up-line"></i>
+                                    </div>
+                                    <div class="page5-elem">
+                                        <div class="over"></div>
+                                        <h3>UX Design</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                                            consequatur
+                                            error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
+                                            animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur?
+                                            Illum,
+                                            ducimus.</p>
+                                        <i class="ri-arrow-right-up-line"></i>
+                                    </div>
+                                    <div class="page5-elem">
+                                        <div class="over"></div>
+                                        <h3>UI Design</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                                            consequatur
+                                            error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
+                                            animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur?
+                                            Illum,
+                                            ducimus.</p>
+                                        <i class="ri-arrow-right-up-line"></i>
+                                    </div>
+                                    <div class="page5-elem">
+                                        <div class="over"></div>
+                                        <h3>UX Audit</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                                            consequatur
+                                            error, enim in iure distinctio, pariatur quibusdam nobis dolor laborum nulla
+                                            animi mollitia voluptas odit, praesentium magni. Exercitationem, tenetur?
+                                            Illum,
+                                            ducimus.</p>
+                                        <i class="ri-arrow-right-up-line"></i>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="page-section">
+            <div id="page6">
+                <h1>Digital Product Design Process</h1>
+                <div id="page6-content">
+                    <div id="blue-btn">
+                        <h4>See all Case Studies <i class="ri-arrow-right-up-line"></i></h4>
+                        <h4>See all Case Studies <i class="ri-arrow-right-up-line"></i></h4>
+                    </div>
+                    <div id="right-6">
+                        <p>We do not take on projects that involve blind conformity or designing out of context. We
+                            won't
+                            settle for a user interface design that is misaligned with your product and digital
+                            strategy.
+                            Neither will we launch web development ventures without user testing to validate our design
+                            solutions.</p>
+                        <p>Instead, we create scalable digital products that meet the ever-evolving demands of our
+                            customers, ensuring long-term sustainability.</p>
+
+                    </div>
+                </div>
+                <div id="page6-bottom">
+                    <div id="btm6-part1" class="btm6-parts"></div>
+                    <div id="btm6-part2" class="btm6-parts">
+                        <h5>Product Strategy</h5>
+                        <h4><span>1</span>Strategy Workshop</h4>
+                        <h4><span>2</span>Idea Validation</h4>
+                        <h4><span>3</span>Market Research</h4>
+                        <h4><span>4</span>Product Positioning</h4>
+                        <h4><span>5</span>UX Research</h4>
+                        <h4><span>6</span>Functional Decomposition</h4>
+                    </div>
+                    <div id="btm6-part3" class="btm6-parts">
+                        <h5>UX Design</h5>
+                        <h4><span>1</span>Strategy </h4>
+                        <h4><span>2</span>Idea </h4>
+
+                    </div>
+                    <div id="btm6-part4" class="btm6-parts">
+                        <h5>UI Design</h5>
+                        <h4><span>1</span>Strategy</h4>
+                        <h4><span>2</span>Idea </h4>
+                        <h4><span>3</span>Market </h4>
+                    </div>
+                    <div id="btm6-part5" class="btm6-parts">
+                        <h5>Delivery</h5>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Footer Section -->
+        <section id="contact" class="page-section">
+            <footer id="page7">
+                <div class="footer-top">
+                    <div class="footer-cta">
+                        <h2>Ready to transform your digital presence?</h2>
+                        <p>Let's create something extraordinary together. Get in touch and let's discuss your next
+                            project.
+                        </p>
+                        <button class="cta-btn" id="footer-talk-btn">Start a Project <i
+                                class="ri-arrow-right-up-line"></i></button>
+                    </div>
+                </div>
+
+                <div class="footer-main">
+                    <div class="footer-col footer-brand">
+                        <h1>LAZAREV.</h1>
+                        <p>Award-winning digital product design agency specializing in AI & ML, Fintech, Real Estate,
+                            E-commerce, and Web3 solutions.</p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link"><i class="ri-twitter-x-fill"></i></a>
+                            <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
+                            <a href="#" class="social-link"><i class="ri-instagram-fill"></i></a>
+                            <a href="#" class="social-link"><i class="ri-dribbble-fill"></i></a>
+                            <a href="#" class="social-link"><i class="ri-behance-fill"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">UI/UX Design</a></li>
+                            <li><a href="#">Product Design</a></li>
+                            <li><a href="#">Brand Identity</a></li>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">Mobile Apps</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Case Studies</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Industries</h4>
+                        <ul>
+                            <li><a href="#">AI & Machine Learning</a></li>
+                            <li><a href="#">Fintech</a></li>
+                            <li><a href="#">Real Estate</a></li>
+                            <li><a href="#">E-commerce</a></li>
+                            <li><a href="#">Web3 & Blockchain</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col footer-newsletter">
+                        <h4>Stay Updated</h4>
+                        <p>Subscribe to our newsletter for design insights and industry trends.</p>
+                        <form class="newsletter-form" onsubmit="return false;">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit"><i class="ri-send-plane-fill"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-bottom-left">
+                        <p>&copy; 2024 LAZAREV. All rights reserved.</p>
+                    </div>
+                    <div class="footer-bottom-right">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </footer>\n
+        </section>\n
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close"><i class="ri-close-line"></i></button>
+            <div class="modal-header">
+                <h2>Let's Talk</h2>
+                <p>Tell us about your project and we'll get back to you within 24 hours.</p>
+            </div>
+            <form id="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" placeholder="Your Company">
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Project Budget</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select Budget Range</option>
+                            <option value="10k-25k">$10,000 - $25,000</option>
+                            <option value="25k-50k">$25,000 - $50,000</option>
+                            <option value="50k-100k">$50,000 - $100,000</option>
+                            <option value="100k+">$100,000+</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="service">What service are you interested in? *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a Service</option>
+                        <option value="uiux">UI/UX Design</option>
+                        <option value="product">Product Design</option>
+                        <option value="brand">Brand Identity</option>
+                        <option value="web">Web Development</option>
+                        <option value="mobile">Mobile App Development</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell us about your project *</label>
+                    <textarea id="message" name="message" rows="5"
+                        placeholder="Describe your project, goals, and timeline..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    Send Message <i class="ri-arrow-right-up-line"></i>
+                </button>
+            </form>
         </div>
     </div>
 
@@ -347,7 +542,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
+
+    <!-- Modular JS Files -->
+    <script src="js/locomotive.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

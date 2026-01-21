@@ -1,23 +1,29 @@
+// Global locomotive scroll instance for smooth navigation
+let locoScrollInstance = null;
+
+/**
+ * Initialize Locomotive Scroll with GSAP ScrollTrigger integration
+ * This provides smooth scrolling throughout the page
+ */
 function locomotiveAnimation() {
     gsap.registerPlugin(ScrollTrigger);
 
-    const locoScroll = new LocomotiveScroll({
+    locoScrollInstance = new LocomotiveScroll({
         el: document.querySelector("#main"),
         smooth: true,
-
         // for tablet smooth
         tablet: { smooth: true },
-
         // for mobile
         smartphone: { smooth: true }
     });
-    locoScroll.on("scroll", ScrollTrigger.update);
+
+    locoScrollInstance.on("scroll", ScrollTrigger.update);
 
     ScrollTrigger.scrollerProxy("#main", {
         scrollTop(value) {
             return arguments.length
-                ? locoScroll.scrollTo(value, 0, 0)
-                : locoScroll.scroll.instance.scroll.y;
+                ? locoScrollInstance.scrollTo(value, 0, 0)
+                : locoScrollInstance.scroll.instance.scroll.y;
         },
         getBoundingClientRect() {
             return {
@@ -29,9 +35,121 @@ function locomotiveAnimation() {
         }
     });
 
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
+    ScrollTrigger.addEventListener("refresh", () => locoScrollInstance.update());
     ScrollTrigger.refresh();
+}
+
+/**
+ * Smooth scroll navigation - handles clicking nav items to scroll to sections
+ */
+function smoothScrollNavigation() {
+    // Get all navigation elements with data-section attribute
+    const navElements = document.querySelectorAll('[data-section]');
+
+    navElements.forEach(elem => {
+        elem.style.cursor = 'pointer';
+
+        elem.addEventListener('click', function (e) {
+            e.preventDefault();
+            const sectionId = this.getAttribute('data-section');
+            const targetSection = document.getElementById(sectionId);
+
+            if (targetSection && locoScrollInstance) {
+                // Use locomotive scroll's scrollTo method for smooth navigation
+                locoScrollInstance.scrollTo(targetSection, {
+                    offset: -80, // Offset for fixed navbar
+                    duration: 1000,
+                    easing: [0.25, 0.0, 0.35, 1.0]
+                });
+            }
+        });
+    });
+
+    // Also handle logo click to scroll to top
+    const navLogo = document.querySelector('.nav-logo');
+    if (navLogo) {
+        navLogo.addEventListener('click', function () {
+            if (locoScrollInstance) {
+                locoScrollInstance.scrollTo(0, {
+                    duration: 1000,
+                    easing: [0.25, 0.0, 0.35, 1.0]
+                });
+            }
+        });
+    }
+}
+
+/**
+ * Scroll-triggered animations for page sections
+ * Elements fade in as they enter the viewport
+ * Note: Excludes #page1 (hero) since it has its own loading animation
+ */
+function scrollAnimations() {
+    // Animate section headings (excluding hero section which has loadingAnimation)
+    gsap.utils.toArray('.page-section h1, .page-section h2').forEach(heading => {
+        // Skip hero section elements - they're animated by loadingAnimation
+        if (heading.closest('#page1') || heading.closest('#home')) {
+            return;
+        }
+
+        gsap.from(heading, {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: heading,
+                scroller: "#main",
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+
+    // Animate footer columns with stagger
+    gsap.from('.footer-col', {
+        opacity: 0,
+        y: 60,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: '.footer-main',
+            scroller: "#main",
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+        }
+    });
+
+    // Animate footer CTA
+    gsap.from('.footer-cta', {
+        opacity: 0,
+        y: 40,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: '.footer-top',
+            scroller: "#main",
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+        }
+    });
+
+    // Animate case study sections
+    gsap.utils.toArray('.section').forEach(section => {
+        gsap.from(section, {
+            opacity: 0,
+            y: 80,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: section,
+                scroller: "#main",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
 }
 
 function loadingAnimation() {
@@ -183,14 +301,95 @@ function page6Animations() {
     })
 }
 
+function contactFormModal() {
+    const modal = document.getElementById('contact-modal');
+    const modalClose = document.getElementById('modal-close');
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const contactForm = document.getElementById('contact-form');
+
+    // Get all "Let's Talk" buttons
+    const navTalkBtn = document.querySelector('nav button');
+    const footerTalkBtn = document.getElementById('footer-talk-btn');
+
+    // Function to open modal
+    function openModal() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Function to close modal
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Event listeners for opening modal
+    if (navTalkBtn) {
+        navTalkBtn.addEventListener('click', openModal);
+    }
+
+    if (footerTalkBtn) {
+        footerTalkBtn.addEventListener('click', openModal);
+    }
+
+    // Event listeners for closing modal
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', closeModal);
+    }
+
+    // Close modal on ESC key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    // Form submission handler
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form data (you can send this to server)
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+
+            // Log data (in real app, you'd send this to a server)
+            console.log('Form submitted:', data);
+
+            // Show success animation
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            submitBtn.innerHTML = '<i class="ri-check-line"></i> Message Sent!';
+            submitBtn.style.background = 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)';
+
+            // Redirect to home page after a short delay
+            setTimeout(function () {
+                closeModal();
+                contactForm.reset();
+                submitBtn.innerHTML = 'Send Message <i class="ri-arrow-right-up-line"></i>';
+                submitBtn.style.background = '';
+
+                // Scroll to top using locomotive scroll
+                if (locoScrollInstance) {
+                    locoScrollInstance.scrollTo(0, { duration: 1000 });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }, 1500);
+        });
+    }
+}
+
+// Initialize all functionality
 locomotiveAnimation()
-
+smoothScrollNavigation()
+scrollAnimations()
 navAnimation()
-
 page2Animation()
-
 page3VideoAnimation()
-
 page6Animations()
-
 loadingAnimation()
+contactFormModal()

@@ -428,11 +428,11 @@ nav button svg {
     width: 70%;
 }
 
-#page5-right > p {
+#page5-right>p {
     font-size: 2.1vw;
 }
 
-#page5-right > p span {
+#page5-right>p span {
     /* background-color: red; */
     width: 15vw;
     display: inline-block;
@@ -557,7 +557,7 @@ summary::marker {
     padding: 10vh 10vw;
 }
 
-#page6 > h1 {
+#page6>h1 {
     font-size: 5.5vw;
     color: #000;
     /* background-color: red; */
@@ -694,27 +694,1068 @@ summary::marker {
     border-radius: 50%;
     margin-right: 1vw;
 }
-#btm6-part2 h4:nth-child(2){
+
+#btm6-part2 h4:nth-child(2) {
     transform: translateX(0);
 }
-#btm6-part2 h4:nth-child(3){
+
+#btm6-part2 h4:nth-child(3) {
     transform: translateX(10%);
 }
-#btm6-part2 h4:nth-child(4){
+
+#btm6-part2 h4:nth-child(4) {
     transform: translateX(20%);
 }
-#btm6-part2 h4:nth-child(5){
+
+#btm6-part2 h4:nth-child(5) {
     transform: translateX(30%);
 }
-#btm6-part2 h4:nth-child(6){
+
+#btm6-part2 h4:nth-child(6) {
     transform: translateX(40%);
 }
-#btm6-part2 h4:nth-child(7){
+
+#btm6-part2 h4:nth-child(7) {
     transform: translateX(50%);
 }
 
 
+/* Footer Styles */
 #page7 {
-    height: 100vh;
+    min-height: 100vh;
     background-color: #111;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top {
+    padding: 8vh 10vw;
+    background: linear-gradient(135deg, #0BA34E 0%, #064a24 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-top::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.footer-cta {
+    max-width: 60%;
+}
+
+.footer-cta h2 {
+    font-size: 3.5vw;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 2vh;
+}
+
+.footer-cta p {
+    font-size: 1.2vw;
+    opacity: 0.9;
+    margin-bottom: 4vh;
+}
+
+.cta-btn {
+    background-color: #fff;
+    color: #111 !important;
+    padding: 1vw 2.5vw;
+    font-size: 1vw;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5vw;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.cta-btn i {
+    color: #111;
+    font-size: 1.2vw;
+    transition: transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cta-btn:hover i {
+    transform: translate(3px, -3px);
+}
+
+.footer-main {
+    padding: 8vh 10vw;
+    display: flex;
+    gap: 3vw;
+    border-bottom: 1px solid #333;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-brand {
+    flex: 2;
+}
+
+.footer-brand h1 {
+    font-size: 2vw;
+    margin-bottom: 2vh;
+}
+
+.footer-brand>p {
+    font-size: 0.9vw;
+    opacity: 0.7;
+    line-height: 1.6;
+    margin-bottom: 3vh;
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.8vw;
+}
+
+.social-link {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link i {
+    font-size: 1vw;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #0BA34E;
+    transform: translateY(-3px);
+}
+
+.footer-col h4 {
+    font-size: 0.9vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 3vh;
+    letter-spacing: 1px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 1.5vh;
+}
+
+.footer-col ul li a {
+    font-size: 0.85vw;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-col ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #0BA34E;
+    transition: width 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.footer-col ul li a:hover::after {
+    width: 100%;
+}
+
+.footer-newsletter p {
+    font-size: 0.85vw;
+    opacity: 0.7;
+    margin-bottom: 2vh;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5vw;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.8vw 1vw;
+    background-color: #222;
+    border: 1px solid #333;
+    border-radius: 50px;
+    font-size: 0.8vw;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-form input:focus {
+    border-color: #0BA34E;
+}
+
+.newsletter-form button {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background-color: #0BA34E;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form button i {
+    font-size: 1vw;
+    color: #fff;
+}
+
+.newsletter-form button:hover {
+    background-color: #0d8a42;
+    transform: scale(1.05);
+}
+
+.footer-bottom {
+    padding: 3vh 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom-left p {
+    font-size: 0.8vw;
+    opacity: 0.6;
+}
+
+.footer-bottom-right {
+    display: flex;
+    gap: 2vw;
+}
+
+.footer-bottom-right a {
+    font-size: 0.8vw;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-right a:hover {
+    color: #fff;
+}
+
+/* Contact Form Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: linear-gradient(145deg, #1a1a1a 0%, #111 100%);
+    border-radius: 20px;
+    padding: 4vw;
+    border: 1px solid #333;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+    transform: translateY(30px) scale(0.95);
+    transition: transform 0.4s ease;
+}
+
+.modal.active .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5vw;
+    right: 1.5vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    background-color: #222;
+    border: 1px solid #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.modal-close i {
+    font-size: 1.3vw;
+    color: #fff;
+}
+
+.modal-close:hover {
+    background-color: #ff4444;
+    border-color: #ff4444;
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    margin-bottom: 3vh;
+    text-align: center;
+}
+
+.modal-header h2 {
+    font-size: 2.5vw;
+    font-weight: 600;
+    margin-bottom: 1vh;
+    background: linear-gradient(135deg, #fff 0%, #0BA34E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.modal-header p {
+    font-size: 1vw;
+    opacity: 0.7;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5vw;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 2vh;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85vw;
+    font-weight: 500;
+    margin-bottom: 0.8vh;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1vw 1.2vw;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    font-size: 0.9vw;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #0BA34E;
+    box-shadow: 0 0 0 3px rgba(11, 163, 78, 0.1);
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1vw center;
+    background-size: 1vw;
+}
+
+.form-group select option {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 10vh;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1.2vw;
+    background: linear-gradient(135deg, #0BA34E 0%, #0d8a42 100%);
+    border: none;
+    border-radius: 50px;
+    font-size: 1vw;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-top: 2vh;
+}
+
+.submit-btn i {
+    font-size: 1.2vw;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(11, 163, 78, 0.3);
+}
+
+.submit-btn:hover i {
+    transform: translate(3px, -3px);
+}
+
+/* Modal scrollbar styling */
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ================================
+   RESPONSIVE STYLES
+   ================================ */
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+    nav {
+        padding: 2vw 5vw;
+    }
+
+    nav h1 {
+        font-size: 2.5vw;
+    }
+
+    .nav-part2 {
+        display: none;
+    }
+
+    nav button {
+        font-size: 1.5vw;
+        padding: 12px 18px;
+    }
+
+    #page1 h1 {
+        font-size: 10vw;
+        line-height: 10vw;
+    }
+
+    #page1 p {
+        font-size: 2vw;
+    }
+
+    #page1-something h4 {
+        font-size: 1.8vw;
+    }
+
+    #page2 {
+        flex-direction: column;
+        padding: 5vw;
+    }
+
+    #page2-left,
+    #page2-right {
+        width: 100%;
+    }
+
+    #page2-left p {
+        font-size: 1.5vw;
+    }
+
+    #page2-left h5 {
+        font-size: 2vw;
+    }
+
+    .right-elem h2 {
+        font-size: 2.5vw;
+    }
+
+    .section {
+        flex-direction: column;
+        height: auto;
+        padding: 5vw;
+    }
+
+    .sec-left,
+    .sec-right {
+        width: 100%;
+    }
+
+    .sec-left {
+        margin-bottom: 3vh;
+    }
+
+    .sec-right {
+        height: 50vh;
+    }
+
+    #page5 {
+        flex-direction: column;
+        padding: 5vh 5vw;
+    }
+
+    #page5-right {
+        width: 100%;
+    }
+
+    #page5-right>p {
+        font-size: 3.5vw;
+    }
+
+    #page5-content h1 {
+        font-size: 5vw;
+    }
+
+    #page6 {
+        padding: 5vh 5vw;
+    }
+
+    #page6>h1 {
+        font-size: 7vw;
+        padding-left: 10vw;
+        line-height: 7.5vw;
+    }
+
+    #page6-content #right-6 p {
+        font-size: 2.5vw;
+    }
+
+    #page6-bottom {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .btm6-parts {
+        width: 50%;
+        border-bottom: 1px solid #dadada;
+    }
+
+    /* Footer Responsive */
+    .footer-cta {
+        max-width: 80%;
+    }
+
+    .footer-cta h2 {
+        font-size: 5vw;
+    }
+
+    .footer-cta p {
+        font-size: 2vw;
+    }
+
+    .cta-btn {
+        font-size: 1.8vw;
+        padding: 1.5vw 3vw;
+    }
+
+    .footer-main {
+        flex-wrap: wrap;
+        gap: 5vw;
+    }
+
+    .footer-col {
+        flex: none;
+        width: 45%;
+    }
+
+    .footer-brand {
+        width: 100%;
+        margin-bottom: 3vh;
+    }
+
+    .footer-brand h1 {
+        font-size: 4vw;
+    }
+
+    .footer-brand>p {
+        font-size: 1.8vw;
+    }
+
+    .footer-col h4 {
+        font-size: 1.5vw;
+    }
+
+    .footer-col ul li a {
+        font-size: 1.4vw;
+    }
+
+    .social-link {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .social-link i {
+        font-size: 1.8vw;
+    }
+
+    .newsletter-form input {
+        font-size: 1.4vw;
+    }
+
+    .newsletter-form button {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .footer-bottom-left p,
+    .footer-bottom-right a {
+        font-size: 1.4vw;
+    }
+
+    /* Modal Responsive */
+    .modal-content {
+        padding: 5vw;
+    }
+
+    .modal-header h2 {
+        font-size: 4vw;
+    }
+
+    .modal-header p {
+        font-size: 1.8vw;
+    }
+
+    .modal-close {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .modal-close i {
+        font-size: 2vw;
+    }
+
+    .form-group label {
+        font-size: 1.4vw;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 1.5vw;
+        padding: 1.5vw;
+    }
+
+    .submit-btn {
+        font-size: 1.8vw;
+        padding: 2vw;
+    }
+
+    .submit-btn i {
+        font-size: 2vw;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 3vw 5vw;
+        height: auto;
+    }
+
+    nav h1 {
+        font-size: 5vw;
+    }
+
+    nav button {
+        font-size: 3vw;
+        padding: 10px 15px;
+    }
+
+    nav button svg {
+        height: 3vw;
+    }
+
+    #page1 {
+        padding: 20vh 5vw 10vh;
+    }
+
+    #page1 h1 {
+        font-size: 12vw;
+        line-height: 12vw;
+    }
+
+    #page1 h1 svg {
+        height: 10vw;
+        width: 10vw;
+    }
+
+    #page1 p {
+        font-size: 3.5vw;
+    }
+
+    #page1-something {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1vw;
+    }
+
+    #page1-something h4 {
+        font-size: 3vw;
+        padding: 6px 12px;
+    }
+
+    #moving-div {
+        width: 90%;
+    }
+
+    #moving-div .move img {
+        height: 3vw;
+    }
+
+    #page2 {
+        padding: 8vw 5vw;
+        min-height: auto;
+    }
+
+    #page2-left p {
+        font-size: 3vw;
+    }
+
+    #page2-left h5 {
+        width: 100%;
+        font-size: 3.5vw;
+    }
+
+    .right-elem {
+        padding: 3vw 0;
+    }
+
+    .right-elem h2 {
+        font-size: 4vw;
+    }
+
+    .page3-center .icon {
+        padding: 5vw;
+    }
+
+    .page3-center .icon i {
+        font-size: 6vw;
+    }
+
+    .page3-center h5 {
+        font-size: 2.5vw;
+        padding: 8px 16px;
+    }
+
+    .section {
+        padding: 8vw 5vw;
+    }
+
+    .sec-left h2 {
+        font-size: 5vw;
+    }
+
+    .sec-left p {
+        font-size: 3vw;
+        margin-top: 3vh;
+    }
+
+    #page5 button {
+        font-size: 3vw;
+        padding: 2vw 4vw;
+    }
+
+    #page5-right>p {
+        font-size: 5vw;
+    }
+
+    #page5-content h1 {
+        font-size: 7vw;
+    }
+
+    #page5-content #flex h4 {
+        font-size: 2.5vw;
+        padding: 6px 12px;
+    }
+
+    .page5-elem h3 {
+        font-size: 4vw;
+    }
+
+    .page5-elem p {
+        font-size: 2.5vw;
+    }
+
+    #page6>h1 {
+        font-size: 8vw;
+        padding-left: 0;
+        line-height: 9vw;
+    }
+
+    #page6-content {
+        flex-direction: column;
+    }
+
+    #page6-content #right-6 {
+        width: 100%;
+    }
+
+    #page6-content #right-6 p {
+        font-size: 3.5vw;
+        width: 100%;
+    }
+
+    #blue-btn {
+        width: 100%;
+        height: 8vw;
+        margin-bottom: 3vh;
+    }
+
+    #blue-btn h4 {
+        font-size: 2.5vw;
+    }
+
+    .btm6-parts {
+        width: 100%;
+    }
+
+    .btm6-parts h5 {
+        font-size: 2.5vw;
+    }
+
+    .btm6-parts h4 {
+        font-size: 2.5vw;
+        width: 90%;
+    }
+
+    .btm6-parts h4 span {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    /* Footer Mobile */
+    .footer-top {
+        padding: 8vh 5vw;
+    }
+
+    .footer-cta {
+        max-width: 100%;
+    }
+
+    .footer-cta h2 {
+        font-size: 7vw;
+    }
+
+    .footer-cta p {
+        font-size: 3.5vw;
+    }
+
+    .cta-btn {
+        font-size: 3.5vw;
+        padding: 3vw 6vw;
+    }
+
+    .cta-btn i {
+        font-size: 4vw;
+    }
+
+    .footer-main {
+        padding: 5vh 5vw;
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+
+    .footer-brand h1 {
+        font-size: 7vw;
+    }
+
+    .footer-brand>p {
+        font-size: 3.5vw;
+    }
+
+    .social-link {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .social-link i {
+        font-size: 4vw;
+    }
+
+    .footer-col h4 {
+        font-size: 3.5vw;
+    }
+
+    .footer-col ul li a {
+        font-size: 3vw;
+    }
+
+    .footer-newsletter p {
+        font-size: 3vw;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    .newsletter-form input {
+        font-size: 3.5vw;
+        padding: 3vw;
+        border-radius: 10px;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+        height: 12vw;
+        border-radius: 10px;
+    }
+
+    .newsletter-form button i {
+        font-size: 4vw;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 2vh;
+        text-align: center;
+        padding: 3vh 5vw;
+    }
+
+    .footer-bottom-left p {
+        font-size: 3vw;
+    }
+
+    .footer-bottom-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3vw;
+    }
+
+    .footer-bottom-right a {
+        font-size: 3vw;
+    }
+
+    /* Modal Mobile */
+    .modal-content {
+        width: 95%;
+        padding: 6vw;
+        border-radius: 15px;
+    }
+
+    .modal-header h2 {
+        font-size: 7vw;
+    }
+
+    .modal-header p {
+        font-size: 3.5vw;
+    }
+
+    .modal-close {
+        width: 8vw;
+        height: 8vw;
+        top: 3vw;
+        right: 3vw;
+    }
+
+    .modal-close i {
+        font-size: 4vw;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-group label {
+        font-size: 3.5vw;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 3.5vw;
+        padding: 3vw;
+        border-radius: 8px;
+    }
+
+    .submit-btn {
+        font-size: 4vw;
+        padding: 4vw;
+        border-radius: 10px;
+    }
+
+    .submit-btn i {
+        font-size: 4.5vw;
+    }
 }

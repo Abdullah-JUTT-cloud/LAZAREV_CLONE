@@ -1,0 +1,76 @@
+/**
+ * Base Styles - Reset, Variables, Typography
+ * Contains global reset, CSS variables, and base typography settings
+ */
+
+/* ================================
+   CSS RESET & GLOBAL STYLES
+   ================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/* ================================
+   CSS VARIABLES (Custom Properties)
+   ================================ */
+:root {
+    /* Colors */
+    --color-primary: #0BA34E;
+    --color-primary-dark: #064a24;
+    --color-dark: #111;
+    --color-dark-light: #222;
+    --color-dark-lighter: #333;
+    --color-white: #fff;
+    --color-gray: #dadada;
+    --color-accent: #4f5bff;
+
+    /* Typography */
+    --font-family: gilroy, sans-serif;
+
+    /* Spacing */
+    --page-padding: 10.4vw;
+    --section-padding: 10vh 10vw;
+
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-medium: 0.5s ease;
+    --transition-slow: 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+    /* Z-Index Layers */
+    --z-nav: 10;
+    --z-nav-dropdown: 9;
+    --z-modal: 10000;
+    --z-video: 99999;
+}
+
+/* ================================
+   UTILITY CLASSES
+   ================================ */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
