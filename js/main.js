@@ -7,7 +7,8 @@
  */
 
 // Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function () {
+// Wait for components to be loaded before initializing
+document.addEventListener('componentsLoaded', function () {
     // Initialize all modules
     initializeApp();
 });
